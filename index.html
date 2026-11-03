@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitbull One Fight 10 | 05/12/2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .font-display { font-family: 'Teko', sans-serif; }
+        body { font-family: 'Inter', sans-serif; }
+        
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #eab308; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ca8a04; }
+    </style>
+</head>
+<body class="bg-black text-gray-100 antialiased selection:bg-yellow-500 selection:text-black">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-zinc-900 border border-yellow-500 text-white px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3">
+        <i data-lucide="check-circle-2" class="w-5 h-5 text-yellow-500"></i>
+        <span id="toast-message" class="text-sm font-semibold">Notificação</span>
+    </div>
+
+    <!-- 0. Header / Navbar Fixa -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-md border-b border-zinc-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Top Left -->
+            <a href="#" class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <img src="https://lh3.googleusercontent.com/d/1lioUFEP0vnpxtPLXjCXWxtCXkEHPbS5T=s1600" alt="Pitbull One Fight Logo" class="h-10 sm:h-12 w-auto object-contain">
+                <span class="font-display text-xl sm:text-2xl tracking-wider text-white hidden sm:inline-block">
+                    PITBULL <span class="text-yellow-500">ONE FIGHT</span>
+                </span>
+            </a>
+            
+            <!-- Links Center -->
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-sm font-bold tracking-widest text-gray-300 uppercase">
+                <a href="#luta-principal" class="hover:text-yellow-500 transition">Fight Card</a>
+                <a href="#diferenciais" class="hover:text-yellow-500 transition">Estrutura</a>
+                <a href="#depoimentos" class="hover:text-yellow-500 transition">Depoimentos</a>
+                <a href="#faq" class="hover:text-yellow-500 transition">Dúvidas</a>
+            </nav>
+
+            <!-- CTA Top Right -->
+            <a href="#ingressos" class="bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase px-4 py-2.5 rounded-none tracking-wider shadow-md shadow-yellow-500/20 transition transform hover:scale-105 text-xs flex items-center gap-1.5 flex-shrink-0">
+                <i data-lucide="ticket" class="w-3.5 h-3.5"></i>
+                <span>Garantir Ingresso</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex items-center justify-center py-20 bg-cover bg-center border-b border-yellow-950/40" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.75)), url('https://lh3.googleusercontent.com/d/1_yhnqoSWCfXFCUwSQjI8t9v0QeAJ1c_L=s1600');">
+            <div class="max-w-5xl mx-auto px-4 text-center space-y-6 relative z-10 flex flex-col items-center">
+                
+                <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/40 px-4 py-1.5 rounded-full text-yellow-500 font-bold text-xs uppercase tracking-widest animate-pulse">
+                    ⚡ EDIÇÃO 10 • 05 DE DEZEMBRO DE 2026 ÀS 14:00
+                </div>
+
+                <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl uppercase leading-none tracking-tight text-white">
+                    O Maior Evento de Luta de <span class="text-yellow-500">Santana de Parnaíba e Região</span>
+                </h1>
+
+                <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto font-light">
+                    Mais de 40 lutas eletrizantes com os melhores <br class="hidden sm:inline">atletas pré-selecionados de São Paulo.
+                </p>
+
+                <!-- Contagem Regressiva -->
+                <div class="grid grid-cols-4 gap-3 max-w-md mx-auto py-4">
+                    <div class="bg-zinc-900/90 border border-yellow-500/30 p-3 rounded text-center">
+                        <span id="days" class="font-display text-3xl sm:text-4xl font-bold text-yellow-500">00</span>
+                        <span class="block text-[10px] text-gray-400 uppercase font-semibold">Dias</span>
+                    </div>
+                    <div class="bg-zinc-900/90 border border-yellow-500/30 p-3 rounded text-center">
+                        <span id="hours" class="font-display text-3xl sm:text-4xl font-bold text-white">00</span>
+                        <span class="block text-[10px] text-gray-400 uppercase font-semibold">Horas</span>
+                    </div>
+                    <div class="bg-zinc-900/90 border border-yellow-500/30 p-3 rounded text-center">
+                        <span id="minutes" class="font-display text-3xl sm:text-4xl font-bold text-white">00</span>
+                        <span class="block text-[10px] text-gray-400 uppercase font-semibold">Min</span>
+                    </div>
+                    <div class="bg-zinc-900/90 border border-yellow-500/30 p-3 rounded text-center">
+                        <span id="seconds" class="font-display text-3xl sm:text-4xl font-bold text-yellow-500">00</span>
+                        <span class="block text-[10px] text-gray-400 uppercase font-semibold">Seg</span>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#ingressos" class="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-black font-black text-xl uppercase px-10 py-4 rounded-none tracking-wider shadow-xl shadow-yellow-500/30 transition transform hover:scale-105">
+                        Comprar Ingresso Agora
+                    </a>
+                </div>
+
+                <p class="text-xs text-gray-400 uppercase tracking-widest pt-2">
+                    🔥 No último evento tivemos mais de <span class="text-white">1.000 pessoas reunidas na arena!</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Seção de Features & Lutas -->
+        <section id="luta-principal" class="py-20 bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Fight Card de Elite</span>
+                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">O Show de Lutas</h2>
+                    <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Main Card: Luta Oficial (Rodrigo Miag vs Gustavo Carrasco) -->
+                    <div class="lg:col-span-2 bg-gradient-to-br from-zinc-900 via-zinc-900 to-black border-2 border-yellow-500/60 rounded-2xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between shadow-2xl shadow-yellow-500/10">
+                        <div class="absolute right-0 top-0 w-1/2 h-full opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-yellow-500 to-transparent pointer-events-none"></div>
+                        
+                        <div>
+                            <span class="bg-yellow-500 text-black text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">Luta Principal (Main Event)</span>
+                            
+                            <!-- Confronto Lutadores -->
+                            <div class="my-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+                                <!-- Lutador 1 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-dashed border-yellow-500/60 bg-black/60 flex items-center justify-center mb-3 shadow-inner relative group overflow-hidden">
+                                        <i data-lucide="user" class="w-10 h-10 text-yellow-500/60"></i>
+                                        <span class="absolute bottom-1 text-[9px] text-gray-400 uppercase tracking-wider">Foto em Breve</span>
+                                    </div>
+                                    <h4 class="font-display text-2xl uppercase text-white tracking-wide">Rodrigo Miag</h4>
+                                    <span class="text-xs text-yellow-500 uppercase font-semibold">Atleta Profissional</span>
+                                </div>
+
+                                <!-- Versus Badge -->
+                                <div class="font-display text-4xl sm:text-5xl text-yellow-500 italic font-black tracking-widest my-2 sm:my-0">
+                                    VS
+                                </div>
+
+                                <!-- Lutador 2 -->
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-dashed border-yellow-500/60 bg-black/60 flex items-center justify-center mb-3 shadow-inner relative group overflow-hidden">
+                                        <i data-lucide="user" class="w-10 h-10 text-yellow-500/60"></i>
+                                        <span class="absolute bottom-1 text-[9px] text-gray-400 uppercase tracking-wider">Foto em Breve</span>
+                                    </div>
+                                    <h4 class="font-display text-2xl uppercase text-white tracking-wide">Gustavo Carrasco</h4>
+                                    <span class="text-xs text-yellow-500 uppercase font-semibold">Atleta Profissional</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-6 border-t border-zinc-800 flex items-center justify-between text-sm">
+                            <div>
+                                <span class="text-gray-400 text-xs uppercase block">Data do Combate</span>
+                                <strong class="text-white font-bold text-lg">05 de Dezembro, 2026</strong>
+                            </div>
+                            <div>
+                                <span class="text-gray-400 text-xs uppercase block">Categoria</span>
+                                <strong class="text-yellow-500 font-bold text-lg">Peso Principal</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Cards Column -->
+                    <div class="space-y-6 flex flex-col justify-between">
+                        <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-7 flex-1 flex flex-col justify-between shadow-lg">
+                            <div>
+                                <span class="bg-yellow-500/20 text-yellow-500 border border-yellow-500/40 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Card Geral</span>
+                                <h3 class="font-display text-3xl uppercase text-white mt-3">Mais de 40 lutas para assistir</h3>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-2 leading-relaxed">Uma maratona ininterrupta de combates intensos divididos entre o card preliminar e o card principal em São Paulo.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-7 flex-1 flex flex-col justify-between shadow-lg">
+                            <div>
+                                <i data-lucide="tv" class="w-8 h-8 text-yellow-500 mb-3"></i>
+                                <h3 class="font-display text-2xl uppercase text-white">Produção Audiovisual</h3>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-2 leading-relaxed">Iluminação estilo arenas internacionais, replays instantâneos em telões e DJ ao vivo durante o evento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 5 Pilares de Diferenciais -->
+        <section id="diferenciais" class="py-20 bg-zinc-950 border-y border-zinc-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Conforto & Estrutura</span>
+                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">POR QUE PARTICIPAR?</h2>
+                    <p class="text-gray-400 mt-2 text-base">Diferenciais estratégicos pensados para garantir uma experiência de alto nível.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
+                        <i data-lucide="snowflake" class="w-10 h-10 text-yellow-500 mb-4"></i>
+                        <h3 class="font-display text-3xl uppercase text-white">Ambiente Climatizado</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Ar-condicionado de alta potência mantendo o clima agradável do primeiro ao último combate, sem calor ou abafamento.</p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
+                        <i data-lucide="crown" class="w-10 h-10 text-yellow-500 mb-4"></i>
+                        <h3 class="font-display text-3xl uppercase text-white">Área VIP</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Espaço reservado beira octógono com atendimento exclusivo, conforto máximo e proximidade dos lutadores.</p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
+                        <i data-lucide="car" class="w-10 h-10 text-yellow-500 mb-4"></i>
+                        <h3 class="font-display text-3xl uppercase text-white">Estacionamento nos Arredores</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Muitas vagas seguras e tranquilas nas ruas e bolsões aos arredores do local do evento, sem estresse ou dor de cabeça.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Seção de Depoimentos -->
+        <section id="depoimentos" class="py-20 bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Experiência do Público</span>
+                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">QUEM FOI, APROVA</h2>
+                    <p class="text-gray-400 mt-2 text-base">Avaliações reais de espectadores das edições anteriores do Pitbull One Fight.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-7 rounded-2xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Juliana Mendes" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500/60 shadow">
+                                <div class="flex text-yellow-500 gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                "Organização impecável do início ao fim, entrada sem filas gigantes, cronograma das lutas seguido à risca e segurança nota 10. Você percebe o respeito que eles têm tanto com os atletas quanto com o público que compra o ingresso."
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Juliana Mendes</h4>
+                                <span class="text-xs text-yellow-500 font-semibold uppercase">Osasco - SP</span>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 px-2.5 py-1 rounded text-gray-400 uppercase font-bold">Ingresso Confirmado</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-7 rounded-2xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Thiago Martins" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500/60 shadow">
+                                <div class="flex text-yellow-500 gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                "Levei minha namorada e ela amou o show! Eu fiquei com receio de ela achar chato, mas a produção do evento parece show de TV internacional! Luzes, DJ, praça de alimentação com ótimos food trucks e estacionamento seguro no local. Virou nosso rolê oficial do fim de ano."
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Thiago Martins</h4>
+                                <span class="text-xs text-yellow-500 font-semibold uppercase">Jundiaí - SP</span>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 px-2.5 py-1 rounded text-gray-400 uppercase font-bold">Ingresso Confirmado</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-7 rounded-2xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=150&auto=format&fit=crop&q=80" alt="Marcelo Camargo" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500/60 shadow">
+                                <div class="flex text-yellow-500 gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                "A experiência do Vip vale cada centavo! Vou de Vip nessa próxima edição com uns amigos da academia. No último evento o atendimento excelente, comida e bebida de qualidade e ficamos a poucos metros do cage trocando ideia com atletas conhecidos. Recomendo demais!"
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Marcelo Camargo</h4>
+                                <span class="text-xs text-yellow-500 font-semibold uppercase">Alphaville - Barueri/SP</span>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 px-2.5 py-1 rounded text-gray-400 uppercase font-bold">Ingresso VIP</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="bg-zinc-900/80 border border-zinc-800 p-7 rounded-2xl flex flex-col justify-between shadow-lg">
+                        <div>
+                            <div class="flex items-center gap-4 mb-4">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80" alt="Fernando Silveira" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500/60 shadow">
+                                <div class="flex text-yellow-500 gap-1">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed">
+                                "O que mais me impressionou no Pitbull One Fight foi a pontualidade e o profissionalismo. O check-in na entrada foi super rápido, a equipe de apoio e segurança orientou todo mundo com maestria e os intervalos entre as lutas foram perfeitamente cronometrados. É raro ver um evento de lutas no Brasil com esse nível de gestão e cuidado em cada detalhe!"
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-zinc-800 flex items-center justify-between">
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Fernando Silveira</h4>
+                                <span class="text-xs text-yellow-500 font-semibold uppercase">Cajamar - SP</span>
+                            </div>
+                            <span class="text-[10px] bg-zinc-800 px-2.5 py-1 rounded text-gray-400 uppercase font-bold">Ingresso Confirmado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Checkout Interativo & Formulário de Lista Oficial com Acompanhantes Dinâmicos -->
+        <section id="ingressos" class="py-20 bg-zinc-950 border-y border-zinc-900">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Vagas Limitadas</span>
+                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">GARANTA SEU LUGAR NA LISTA</h2>
+                    <p class="text-gray-400 mt-2 text-sm sm:text-base">Selecione seu ingresso para o Pitbull One Fight 10 (05/12/2026 às 14:00).</p>
+                </div>
+
+                <!-- Seleção de Ingressos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+                    <!-- Option 1: Arquibancada -->
+                    <div onclick="selectTicket('Arquibancada', 59.90)" id="ticket-Arquibancada" class="ticket-card cursor-pointer bg-zinc-900 border-2 border-zinc-800 hover:border-yellow-500 p-6 rounded-2xl transition flex flex-col justify-between relative">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 bg-zinc-800 px-3 py-1 rounded">Setor Geral</span>
+                            <h3 class="font-display text-3xl uppercase text-white mt-3">Arquibancada</h3>
+                            <p class="text-xs text-gray-400 mt-1">Visão geral elevada de toda a arena.</p>
+                        </div>
+                        <div class="mt-8">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-bold text-yellow-500">R$</span>
+                                <span class="font-display text-5xl font-bold text-white">59</span>
+                                <span class="text-xs text-gray-400">,90</span>
+                            </div>
+                            <button type="button" class="w-full mt-4 bg-zinc-800 text-gray-200 font-bold py-3 rounded-none uppercase text-xs tracking-wider pointer-events-none">Selecionar</button>
+                        </div>
+                    </div>
+
+                    <!-- Option 2: Cadeira VIP -->
+                    <div onclick="selectTicket('Cadeira VIP', 149.90)" id="ticket-Cadeira VIP" class="ticket-card cursor-pointer bg-zinc-900 border-2 border-yellow-500 p-6 rounded-2xl transition flex flex-col justify-between relative shadow-xl shadow-yellow-500/10">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-yellow-500 text-black text-[10px] font-black uppercase px-4 py-1 rounded-full tracking-widest shadow">
+                            Mais Popular
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-500 bg-yellow-950/60 px-3 py-1 rounded border border-yellow-800/60">Beira Octógono</span>
+                            <h3 class="font-display text-3xl uppercase text-white mt-3">Cadeira VIP</h3>
+                            <p class="text-xs text-gray-400 mt-1">Assentos bem próximos do cage de lutas.</p>
+                        </div>
+                        <div class="mt-8">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-bold text-yellow-500">R$</span>
+                                <span class="font-display text-5xl font-bold text-yellow-500">149</span>
+                                <span class="text-xs text-gray-400">,90</span>
+                            </div>
+                            <button type="button" class="w-full mt-4 bg-yellow-500 text-black font-bold py-3 rounded-none uppercase text-xs tracking-wider pointer-events-none">Selecionar VIP</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Entrada na Lista Oficial -->
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-10 shadow-2xl">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-zinc-800 pb-6 mb-6 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest">Confirmação de Acesso</span>
+                    <h3 class="font-display text-3xl uppercase text-white mt-1">Inclusão na Lista Oficial de Entrada</h3>
+                </div>
+                <div class="bg-black px-4 py-2.5 rounded-xl border border-zinc-800">
+                    <span class="text-[10px] text-gray-400 block uppercase font-bold">Ingresso Selecionado</span>
+                    <span id="ticket-summary-name" class="font-bold text-yellow-500 text-sm">Cadeira VIP (R$ 149,90)</span>
+                </div>
+            </div>
+
+            <form onsubmit="sendOrderToWhatsApp(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Nome Completo do Comprador</label>
+                        <input type="text" id="buyer-name" required placeholder="Digite seu nome completo" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">E-mail para Confirmação</label>
+                        <input type="email" id="buyer-email" required placeholder="seu@email.com" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">WhatsApp / Telefone</label>
+                        <input type="tel" id="buyer-phone" required placeholder="(11) 99999-9999" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Quantidade de Ingressos</label>
+                        <select id="buyer-qty" onchange="onQuantityChange()" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                            <option value="1">1 Ingresso</option>
+                            <option value="2">2 Ingressos</option>
+                            <option value="3">3 Ingressos</option>
+                            <option value="4">4 Ingressos</option>
+                            <option value="5">5 Ingressos</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Container Dinâmico para Nomes dos Acompanhantes -->
+                <div id="companions-container" class="space-y-3 pt-2 border-t border-zinc-800/60 hidden">
+                    <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest block">Nomes dos Acompanhantes para a Lista</span>
+                    <div id="companions-inputs" class="space-y-3">
+                        <!-- Gerado via JS -->
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-800">
+                    <div>
+                        <span class="text-xs text-gray-400 block font-semibold uppercase">Total a Pagar:</span>
+                        <span id="final-total-display" class="font-display text-4xl font-bold text-yellow-500">R$ 149,90</span>
+                    </div>
+                    <button type="submit" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-extrabold uppercase text-base px-10 py-4 rounded-none tracking-wider shadow-xl shadow-green-600/20 transition flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Enviar Pedido via WhatsApp</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+        <!-- 7. FAQ Sanfonado -->
+        <section id="faq" class="py-20 bg-zinc-950">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Perguntas Frequentes</span>
+                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">DÚVIDAS FREQUENTES</h2>
+                    <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-base sm:text-lg">Crianças ou menores de idade podem participar do evento?</span>
+                            <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                        </button>
+                        <div id="faq-content-1" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                            A classificação indicativa do evento é de 16 anos. Menores de 16 anos só poderão entrar acompanhados pelos pais ou responsável legal portando a devida documentação na entrada.
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-base sm:text-lg">O evento possui estacionamento e estrutura de alimentação no local?</span>
+                            <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                        </button>
+                        <div id="faq-content-2" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                            O local conta com uma excelente praça de alimentação e bar completo para você comer e beber com total conforto durante o evento. Quanto ao estacionamento, não dispomos de estacionamento próprio, mas a região conta com muitas vagas seguras aos arredores, sendo super fácil e tranquilo estacionar.
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-base sm:text-lg">Como funciona o acesso ao evento e o que preciso levar na entrada?</span>
+                            <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                        </button>
+                        <div id="faq-content-3" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                            O acesso é simples e direto: o seu nome e o de seus acompanhantes entram automaticamente para a Lista Oficial de Entrada assim que o pagamento é confirmado. No dia do evento, basta dirigir-se à portaria e apresentar um documento oficial com foto (RG ou CNH) para validação do nome na lista e liberação do acesso.
+                        </div>
+                    </div>
+
+                    <!-- Q4 (Como Chegar / Localização) -->
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-base sm:text-lg">Como chegar no local do evento? Qual é o endereço e mapa?</span>
+                            <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                        </button>
+                        <div id="faq-content-4" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4 space-y-4">
+                            <div>
+                                <strong class="text-white block text-sm sm:text-base">Endereço Oficial:</strong>
+                                <p class="text-gray-300 mt-0.5">Rua Suzana Dias, 260 — Centro<br>Santana de Parnaíba · SP</p>
+                            </div>
+                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                                Localizado no coração histórico de Santana de Parnaíba, com fácil acesso pelas principais vias da região metropolitana de São Paulo.
+                            </p>
+                            <div>
+                                <a href="https://share.google/lUrLGdbAxi6Tm5AEW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase text-xs px-6 py-3 rounded-none tracking-wider transition shadow">
+                                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                                    <span>Abrir Rota no Google Maps</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA Final -->
+        <section class="py-20 bg-gradient-to-t from-black via-zinc-950 to-black border-t border-zinc-900 text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
+                <span class="text-yellow-500 font-extrabold text-xs uppercase tracking-widest bg-yellow-950/60 px-4 py-1.5 rounded-full border border-yellow-800/60">
+                    Vagas Limitadas • 05/12/2026 às 14:00
+                </span>
+                
+                <h2 class="font-display text-5xl sm:text-7xl uppercase tracking-wider text-white">
+                    NÃO FIQUE DE FORA DO PITBULL ONE FIGHT 10
+                </h2>
+                
+                <p class="text-gray-300 text-lg sm:text-xl font-light">
+                    Garanta seu nome na lista e viva a experiência máxima das lutas em Santana de Parnaíba.
+                </p>
+
+                <div class="pt-4">
+                    <a href="#ingressos" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase text-xl px-12 py-5 rounded-none tracking-wider shadow-2xl shadow-yellow-500/30 transition transform hover:scale-105">
+                        Garantir Meu Ingresso Agora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Produção Oficial -->
+        <section class="py-8 bg-zinc-950 border-t border-zinc-900">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Produção Oficial e Cobertura</p>
+                <div class="flex items-center justify-center gap-12 sm:gap-20 opacity-70 font-display text-2xl sm:text-3xl tracking-widest text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="film" class="w-6 h-6 text-yellow-500"></i>
+                        <span>HUNT FILMS</span>
+                    </div>
+                    <span>•</span>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500"></i>
+                        <span>CRIAIDE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. Rodapé Oficial -->
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 text-center sm:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <img src="https://lh3.googleusercontent.com/d/1lioUFEP0vnpxtPLXjCXWxtCXkEHPbS5T=s1600" alt="Pitbull One Fight Logo" class="h-10 w-auto object-contain">
+                <div>
+                    <span class="font-display text-2xl text-white tracking-wider">PITBULL <span class="text-yellow-500">ONE FIGHT</span></span>
+                    <p class="text-xs text-gray-500 mt-0.5">Pitbull One Fight © 2026 • Todos os direitos reservados.</p>
+                </div>
+            </div>
+
+            <a href="https://www.instagram.com/pitbullonefight/" target="_blank" rel="noopener noreferrer" class="text-yellow-500 hover:text-yellow-400 font-bold text-sm flex items-center gap-2 transition uppercase tracking-wider">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+                <span>@pitbullonefight</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <span class="bg-yellow-950/80 text-yellow-500 text-[10px] font-bold uppercase px-3 py-1 rounded border border-yellow-800/60">Inclusão Automatizada</span>
+                <h3 class="font-display text-3xl uppercase text-white mt-2">PAGAMENTO PIX</h3>
+                <p class="text-xs text-gray-400 mt-1">Ao confirmar o pagamento, seu nome entra na Lista Oficial de Entrada.</p>
+            </div>
+
+            <div class="bg-black p-5 rounded-xl border border-zinc-800 text-center space-y-4">
+                <div class="w-44 h-44 bg-white p-2 rounded-xl mx-auto flex items-center justify-center shadow-lg">
+                    <svg class="w-full h-full text-black" viewBox="0 0 100 100">
+                        <rect width="100" height="100" fill="white"/>
+                        <path d="M10 10h30v30H10zM15 15v20h20V15zM60 10h30v30H60zM65 15v20h20V15zM10 60h30v30H10zM15 65v20h20V65z" fill="black"/>
+                        <rect x="20" y="20" width="10" height="10" fill="black"/>
+                        <rect x="70" y="20" width="10" height="10" fill="black"/>
+                        <rect x="20" y="70" width="10" height="10" fill="black"/>
+                        <rect x="45" y="10" width="10" height="30" fill="black"/>
+                        <rect x="45" y="50" width="35" height="10" fill="black"/>
+                        <rect x="50" y="70" width="20" height="20" fill="black"/>
+                    </svg>
+                </div>
+
+                <div class="text-left bg-zinc-900 p-3 rounded-lg border border-zinc-800 text-xs text-gray-300">
+                    <p><strong class="text-white">Titular da Lista:</strong> <span id="modal-buyer-name">Nome</span></p>
+                    <p><strong class="text-white">Ingresso:</strong> <span id="modal-ticket-desc">1x Cadeira VIP</span></p>
+                    <p><strong class="text-white">Total:</strong> <span id="modal-total-val" class="text-yellow-500 font-bold">R$ 149,90</span></p>
+                </div>
+
+                <button type="button" onclick="copyPixCode()" class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-sm py-3.5 rounded-none uppercase tracking-wider transition flex items-center justify-center gap-2">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                    <span>Copiar Chave PIX Copia e Cola</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Contagem Regressiva para 05/12/2026 às 14:00
+        const eventDate = new Date('2026-12-05T14:00:00').getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            if (diff > 0) {
+                document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            }
+        }, 1000);
+
+        // State & Calculator
+        let selectedTicket = { name: 'Cadeira VIP', price: 149.90 };
+
+        function selectTicket(name, price) {
+            selectedTicket = { name, price };
+            const formattedPrice = price.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('ticket-summary-name').innerText = `${name} (R$ ${formattedPrice})`;
+            
+            document.querySelectorAll('.ticket-card').forEach(card => {
+                card.classList.remove('border-yellow-500', 'shadow-xl');
+                card.classList.add('border-zinc-800');
+            });
+            const activeCard = document.getElementById(`ticket-${name}`);
+            if (activeCard) {
+                activeCard.classList.remove('border-zinc-800');
+                activeCard.classList.add('border-yellow-500', 'shadow-xl');
+            }
+
+            updateTotalCalculator();
+        }
+
+        function onQuantityChange() {
+            updateTotalCalculator();
+            updateCompanionFields();
+        }
+
+        function updateTotalCalculator() {
+            const qty = parseInt(document.getElementById('buyer-qty').value) || 1;
+            const total = selectedTicket.price * qty;
+            const formattedTotal = total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+            document.getElementById('final-total-display').innerText = `R$ ${formattedTotal}`;
+        }
+
+        function updateCompanionFields() {
+            const qty = parseInt(document.getElementById('buyer-qty').value) || 1;
+            const container = document.getElementById('companions-container');
+            const inputsContainer = document.getElementById('companions-inputs');
+            
+            inputsContainer.innerHTML = '';
+
+            if (qty > 1) {
+                container.classList.remove('hidden');
+                for (let i = 1; i < qty; i++) {
+                    const div = document.createElement('div');
+                    div.innerHTML = `
+                        <label class="block text-[11px] font-bold uppercase text-gray-400 mb-1">Nome Completo do Acompanhante ${i}</label>
+                        <input type="text" required placeholder="Digite o nome completo do acompanhante ${i}" class="companion-input w-full bg-black border border-zinc-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-500">
+                    `;
+                    inputsContainer.appendChild(div);
+                }
+            } else {
+                container.classList.add('hidden');
+            }
+        }
+
+        // Toggle FAQ Accordion
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Enviar pedido direto para o WhatsApp
+        function sendOrderToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('buyer-name').value;
+            const email = document.getElementById('buyer-email').value;
+            const phone = document.getElementById('buyer-phone').value;
+            const qty = document.getElementById('buyer-qty').value;
+            const total = (selectedTicket.price * parseInt(qty)).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
+            let companionsList = [];
+            const companionInputs = document.querySelectorAll('.companion-input');
+            companionInputs.forEach((input, index) => {
+                if (input.value.trim() !== '') {
+                    companionsList.push(`- Acompanhante ${index + 1}: ${input.value.trim()}`);
+                }
+            });
+
+            showToast("Redirecionando para o seu WhatsApp com os dados do pedido...");
+
+            let msg = `Olá, vim pelo site e quero garantir a minha vaga para o Pitbull One Fight no dia 05/12, segue minhas informações:\n\n`;
+            msg += `*Comprador:* ${name}\n`;
+            msg += `*E-mail:* ${email}\n`;
+            msg += `*Telefone/WhatsApp:* ${phone}\n`;
+            msg += `*Ingresso:* ${qty}x ${selectedTicket.name}\n`;
+            msg += `*Valor Total:* R$ ${total}\n`;
+            
+            if (companionsList.length > 0) {
+                msg += `\n*Lista de Acompanhantes:*\n` + companionsList.join('\n') + `\n`;
+            }
+            
+            msg += `\nGostaria de concluir a compra e solicitar a chave Pix para pagamento, por favor.`;
+
+            const whatsappNumber = "5511949426681"; 
+            const encodedMsg = encodeURIComponent(msg);
+
+            setTimeout(() => {
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
+            }, 1000);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const messageEl = document.getElementById('toast-message');
+            messageEl.innerText = msg;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
