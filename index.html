@@ -48,7 +48,6 @@
             
             <!-- Links Center -->
             <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs lg:text-sm font-bold tracking-widest text-gray-300 uppercase">
-                <a href="#luta-principal" class="hover:text-yellow-500 transition">Fight Card</a>
                 <a href="#diferenciais" class="hover:text-yellow-500 transition">Estrutura</a>
                 <a href="#depoimentos" class="hover:text-yellow-500 transition">Depoimentos</a>
                 <a href="#faq" class="hover:text-yellow-500 transition">Dúvidas</a>
@@ -63,8 +62,8 @@
     </header>
 
     <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="relative min-h-[85vh] flex items-center justify-center py-20 bg-cover bg-center border-b border-yellow-950/40" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.75)), url('https://lh3.googleusercontent.com/d/1_yhnqoSWCfXFCUwSQjI8t9v0QeAJ1c_L=s1600');">
+        <!-- Hero Section com Blur/Fade suave no rodapé -->
+        <section class="relative min-h-[85vh] flex items-center justify-center py-20 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.85)), url('https://lh3.googleusercontent.com/d/1_yhnqoSWCfXFCUwSQjI8t9v0QeAJ1c_L=s1600');">
             <div class="max-w-5xl mx-auto px-4 text-center space-y-6 relative z-10 flex flex-col items-center">
                 
                 <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/40 px-4 py-1.5 rounded-full text-yellow-500 font-bold text-xs uppercase tracking-widest animate-pulse">
@@ -109,90 +108,13 @@
                     🔥 No último evento tivemos mais de <span class="text-white">1.000 pessoas reunidas na arena!</span>
                 </p>
             </div>
-        </section>
 
-        <!-- 3. Seção de Features & Lutas -->
-        <section id="luta-principal" class="py-20 bg-zinc-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Fight Card de Elite</span>
-                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">O Show de Lutas</h2>
-                    <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Main Card: Luta Oficial (Rodrigo Miag vs Gustavo Carrasco) -->
-                    <div class="lg:col-span-2 bg-gradient-to-br from-zinc-900 via-zinc-900 to-black border-2 border-yellow-500/60 rounded-2xl p-8 sm:p-10 relative overflow-hidden flex flex-col justify-between shadow-2xl shadow-yellow-500/10">
-                        <div class="absolute right-0 top-0 w-1/2 h-full opacity-10 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-yellow-500 to-transparent pointer-events-none"></div>
-                        
-                        <div>
-                            <span class="bg-yellow-500 text-black text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider">Luta Principal (Main Event)</span>
-                            
-                            <!-- Confronto Lutadores -->
-                            <div class="my-8 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-                                <!-- Lutador 1 -->
-                                <div class="flex flex-col items-center text-center">
-                                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-dashed border-yellow-500/60 bg-black/60 flex items-center justify-center mb-3 shadow-inner relative group overflow-hidden">
-                                        <i data-lucide="user" class="w-10 h-10 text-yellow-500/60"></i>
-                                        <span class="absolute bottom-1 text-[9px] text-gray-400 uppercase tracking-wider">Foto em Breve</span>
-                                    </div>
-                                    <h4 class="font-display text-2xl uppercase text-white tracking-wide">Rodrigo Miag</h4>
-                                    <span class="text-xs text-yellow-500 uppercase font-semibold">Atleta Profissional</span>
-                                </div>
-
-                                <!-- Versus Badge -->
-                                <div class="font-display text-4xl sm:text-5xl text-yellow-500 italic font-black tracking-widest my-2 sm:my-0">
-                                    VS
-                                </div>
-
-                                <!-- Lutador 2 -->
-                                <div class="flex flex-col items-center text-center">
-                                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-dashed border-yellow-500/60 bg-black/60 flex items-center justify-center mb-3 shadow-inner relative group overflow-hidden">
-                                        <i data-lucide="user" class="w-10 h-10 text-yellow-500/60"></i>
-                                        <span class="absolute bottom-1 text-[9px] text-gray-400 uppercase tracking-wider">Foto em Breve</span>
-                                    </div>
-                                    <h4 class="font-display text-2xl uppercase text-white tracking-wide">Gustavo Carrasco</h4>
-                                    <span class="text-xs text-yellow-500 uppercase font-semibold">Atleta Profissional</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 pt-6 border-t border-zinc-800 flex items-center justify-between text-sm">
-                            <div>
-                                <span class="text-gray-400 text-xs uppercase block">Data do Combate</span>
-                                <strong class="text-white font-bold text-lg">05 de Dezembro, 2026</strong>
-                            </div>
-                            <div>
-                                <span class="text-gray-400 text-xs uppercase block">Categoria</span>
-                                <strong class="text-yellow-500 font-bold text-lg">Peso Principal</strong>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Secondary Cards Column -->
-                    <div class="space-y-6 flex flex-col justify-between">
-                        <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-7 flex-1 flex flex-col justify-between shadow-lg">
-                            <div>
-                                <span class="bg-yellow-500/20 text-yellow-500 border border-yellow-500/40 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Card Geral</span>
-                                <h3 class="font-display text-3xl uppercase text-white mt-3">Mais de 40 lutas para assistir</h3>
-                                <p class="text-gray-400 text-xs sm:text-sm mt-2 leading-relaxed">Uma maratona ininterrupta de combates intensos divididos entre o card preliminar e o card principal em São Paulo.</p>
-                            </div>
-                        </div>
-
-                        <div class="bg-zinc-900/90 border border-zinc-800 rounded-2xl p-7 flex-1 flex flex-col justify-between shadow-lg">
-                            <div>
-                                <i data-lucide="tv" class="w-8 h-8 text-yellow-500 mb-3"></i>
-                                <h3 class="font-display text-2xl uppercase text-white">Produção Audiovisual</h3>
-                                <p class="text-gray-400 text-xs sm:text-sm mt-2 leading-relaxed">Iluminação estilo arenas internacionais, replays instantâneos em telões e DJ ao vivo durante o evento.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Efeito Blur & Soft Fade de Transição para a próxima seção -->
+            <div class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent via-zinc-950/70 to-zinc-950 backdrop-blur-[2px] pointer-events-none"></div>
         </section>
 
         <!-- 4. 5 Pilares de Diferenciais -->
-        <section id="diferenciais" class="py-20 bg-zinc-950 border-y border-zinc-900">
+        <section id="diferenciais" class="relative py-20 bg-zinc-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Conforto & Estrutura</span>
@@ -205,7 +127,7 @@
                     <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
                         <i data-lucide="zap" class="w-10 h-10 text-yellow-500 mb-4"></i>
                         <h3 class="font-display text-3xl uppercase text-white">Lutas Eletrizantes</h3>
-                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Combates que vão te tirar o fôlego, com atletas mais bem preparados do circuito, garantindo uma pura adrenalina, sendo um espetáculo do início ao fim.</p>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">Combates que vão te tirar o fôlego, com atletas mais bem preparados do circuito, garantindo uma pura adrenaline, um espetáculo do início ao fim.</p>
                     </div>
 
                     <!-- Pillar 2 -->
@@ -223,10 +145,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Efeito Blur/Glow de Transição -->
+            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-zinc-950 backdrop-blur-[1px] pointer-events-none"></div>
         </section>
 
         <!-- 5. Seção de Depoimentos -->
-        <section id="depoimentos" class="py-20 bg-zinc-950">
+        <section id="depoimentos" class="relative py-20 bg-zinc-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Experiência do Público</span>
@@ -291,7 +216,7 @@
                     <div class="bg-zinc-900/80 border border-zinc-800 p-7 rounded-2xl flex flex-col justify-between shadow-lg">
                         <div>
                             <div class="flex items-center gap-4 mb-4">
-                                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=150&auto=format&fit=crop&q=80" alt="Marcelo Camargo" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500/60 shadow">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" alt="Marcelo Camargo" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500/60 shadow">
                                 <div class="flex text-yellow-500 gap-1">
                                     <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                                     <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -317,8 +242,8 @@
         </section>
 
         <!-- 6. Checkout Interativo & Formulário de Lista Oficial com Acompanhantes Dinâmicos -->
-        <section id="ingressos" class="py-20 bg-zinc-950 border-y border-zinc-900">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="ingressos" class="relative py-20 bg-zinc-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-14">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Vagas Limitadas</span>
                     <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">GARANTA SEU LUGAR NA LISTA</h2>
@@ -430,9 +355,12 @@
     </div>
 </section>
 
-        <!-- 7. FAQ Sanfonado -->
-        <section id="faq" class="py-20 bg-zinc-950">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Blur Section Divider -->
+<div class="relative w-full h-16 bg-gradient-to-b from-zinc-950 via-zinc-900/40 to-zinc-950 backdrop-blur-md z-20 -mt-8 -mb-8 pointer-events-none"></div>
+
+<!-- 7. FAQ Sanfonado -->
+<section id="faq" class="py-20 bg-zinc-950 relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Perguntas Frequentes</span>
                     <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">DÚVIDAS FREQUENTES</h2>
@@ -506,8 +434,9 @@
                     Vagas Limitadas • 05/12/2026 às 14:00
                 </span>
                 
-                <h2 class="font-display text-5xl sm:text-7xl uppercase tracking-wider text-white">
-                    NÃO FIQUE DE FORA DO 10° PITBULL ONE FIGHT
+                <h2 class="font-display text-5xl sm:text-7xl uppercase tracking-wider text-white leading-tight">
+                    NÃO FIQUE DE FORA DO<br>
+                    <span class="text-yellow-500 drop-shadow-[0_0_25px_rgba(234,179,8,0.85)] animate-pulse inline-block">10° PITBULL ONE FIGHT</span>
                 </h2>
                 
                 <p class="text-gray-300 text-lg sm:text-xl font-light">
@@ -523,18 +452,22 @@
         </section>
 
         <!-- 9. Produção Oficial -->
-        <section class="py-8 bg-zinc-950 border-t border-zinc-900">
+        <section class="py-10 bg-zinc-950 border-t border-zinc-900 relative">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Produção Oficial e Cobertura</p>
-                <div class="flex items-center justify-center gap-12 sm:gap-20 opacity-70 font-display text-2xl sm:text-3xl tracking-widest text-gray-400">
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="film" class="w-6 h-6 text-yellow-500"></i>
-                        <span>HUNT FILMS</span>
+                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-6">Produção Oficial e Cobertura</p>
+                <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
+                    <!-- Bloco TV -->
+                    <div class="flex items-center gap-3">
+                        <img src="https://lh3.googleusercontent.com/d/1Gwxh-1uFsf5sIag4zCPzRuKyOR7T7n0V=s1600" alt="Bloco TV" class="h-10 sm:h-12 w-auto object-contain hover:scale-105 transition duration-300">
+                        <span class="font-display text-2xl sm:text-3xl tracking-widest text-gray-300 uppercase">BLOCO TV</span>
                     </div>
-                    <span>•</span>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="sparkles" class="w-6 h-6 text-yellow-500"></i>
-                        <span>CRIAIDE</span>
+
+                    <span class="hidden sm:inline text-gray-700 text-2xl">•</span>
+
+                    <!-- Criaide -->
+                    <div class="flex items-center gap-3">
+                        <img src="https://lh3.googleusercontent.com/d/1866QP8UyYbh-WMXyoJ-lHhL-_MAyXVoo=s1600" alt="Criaide" class="h-10 sm:h-12 w-auto object-contain hover:scale-105 transition duration-300">
+                        <span class="font-display text-2xl sm:text-3xl tracking-widest text-gray-300 uppercase">CRIAIDE</span>
                     </div>
                 </div>
             </div>
