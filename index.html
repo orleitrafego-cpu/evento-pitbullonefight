@@ -453,45 +453,45 @@
 
                 <div class="space-y-3 sm:space-y-4">
                     <!-- Q1 -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(1)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-sm sm:text-lg">Crianças ou menores de idade podem participar do evento?</span>
-                            <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300">
+                        <button type="button" onclick="toggleFaq(1)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition cursor-pointer select-none">
+                            <span id="faq-title-1" class="text-sm sm:text-lg transition-colors">Crianças ou menores de idade podem participar do evento?</span>
+                            <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform duration-300 transform"></i>
                         </button>
-                        <div id="faq-content-1" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4">
+                        <div id="faq-content-1" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800/80 pt-3 sm:pt-4">
                             A classificação indicativa do evento é de 16 anos. Menores de 16 anos só poderão entrar acompanhados pelos pais ou responsável legal portando a devida documentação na entrada.
                         </div>
                     </div>
 
                     <!-- Q2 -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(2)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-sm sm:text-lg">O evento possui estacionamento e estrutura de alimentação no local?</span>
-                            <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300">
+                        <button type="button" onclick="toggleFaq(2)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition cursor-pointer select-none">
+                            <span id="faq-title-2" class="text-sm sm:text-lg transition-colors">O evento possui estacionamento e estrutura de alimentação no local?</span>
+                            <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform duration-300 transform"></i>
                         </button>
-                        <div id="faq-content-2" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4">
+                        <div id="faq-content-2" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800/80 pt-3 sm:pt-4">
                             O local conta com uma excelente praça de alimentação e bar completo para você comer e beber com total conforto durante o evento. Quanto ao estacionamento, não dispomos de estacionamento próprio, mas a região conta com muitas vagas seguras aos arredores, sendo super fácil e tranquilo estacionar.
                         </div>
                     </div>
 
                     <!-- Q3 -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(3)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-sm sm:text-lg">Como funciona o acesso ao evento e o que preciso levar na entrada?</span>
-                            <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300">
+                        <button type="button" onclick="toggleFaq(3)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition cursor-pointer select-none">
+                            <span id="faq-title-3" class="text-sm sm:text-lg transition-colors">Como funciona o acesso ao evento e o que preciso levar na entrada?</span>
+                            <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform duration-300 transform"></i>
                         </button>
-                        <div id="faq-content-3" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4">
+                        <div id="faq-content-3" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800/80 pt-3 sm:pt-4">
                             O acesso é simples e direto: o seu nome e o de seus acompanhantes entram automaticamente para a Lista Oficial de Entrada assim que o pagamento é confirmado. No dia do evento, basta dirigir-se à portaria e apresentar um documento oficial com foto (RG ou CNH) para validação do nome na lista e liberação do acesso.
                         </div>
                     </div>
 
                     <!-- Q4 (Como Chegar / Localização) -->
-                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(4)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-sm sm:text-lg">Como chegar no local do evento? Qual é o endereço e mapa?</span>
-                            <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
+                    <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300">
+                        <button type="button" onclick="toggleFaq(4)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition cursor-pointer select-none">
+                            <span id="faq-title-4" class="text-sm sm:text-lg transition-colors">Como chegar no local do evento? Qual é o endereço e mapa?</span>
+                            <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform duration-300 transform"></i>
                         </button>
-                        <div id="faq-content-4" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4 space-y-3 sm:space-y-4">
+                        <div id="faq-content-4" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800/80 pt-3 sm:pt-4 space-y-3 sm:space-y-4">
                             <div>
                                 <strong class="text-white block text-xs sm:text-base">Endereço Oficial:</strong>
                                 <p class="text-gray-300 mt-0.5">Rua Suzana Dias, 260 — Centro<br>Santana de Parnaíba · SP</p>
@@ -621,6 +621,41 @@
     <script>
         // Init Icons
         lucide.createIcons();
+
+        // FAQ Toggle Logic
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-content-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+            const title = document.getElementById(`faq-title-${id}`);
+
+            if (!content) return;
+
+            const isHidden = content.classList.contains('hidden');
+
+            // Fechar todas as outras abertas para manter a UI limpa
+            for (let i = 1; i <= 4; i++) {
+                const itemContent = document.getElementById(`faq-content-${i}`);
+                const itemIcon = document.getElementById(`faq-icon-${i}`);
+                const itemTitle = document.getElementById(`faq-title-${i}`);
+
+                if (itemContent && i !== id) {
+                    itemContent.classList.add('hidden');
+                    if (itemIcon) itemIcon.classList.remove('rotate-180');
+                    if (itemTitle) itemTitle.classList.remove('text-yellow-500');
+                }
+            }
+
+            // Alternar a clicada
+            if (isHidden) {
+                content.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180');
+                if (title) title.classList.add('text-yellow-500');
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.classList.remove('rotate-180');
+                if (title) title.classList.remove('text-yellow-500');
+            }
+        }
 
         // Testimonial Carousel Controls - Loop Infinito
         const slider = document.getElementById('testimonial-slider');
