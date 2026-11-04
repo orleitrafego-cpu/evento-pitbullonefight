@@ -760,19 +760,19 @@
                 }
             });
 
-            // Extrai acompanhantes individuais para as colunas H, I, J, K
+            <!-- Extrai acompanhantes individuais para as colunas H, I, J, K -->
             const companion1 = companionInputs[0] ? companionInputs[0].value.trim() : '';
             const companion2 = companionInputs[1] ? companionInputs[1].value.trim() : '';
             const companion3 = companionInputs[2] ? companionInputs[2].value.trim() : '';
             const companion4 = companionInputs[3] ? companionInputs[3].value.trim() : '';
 
-            // URL da sua Web App do Google Sheets (Substitua pela sua URL)
-            const GOOGLE_SHEETS_WEBAPP_URL = "SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI";
+            // URL da sua Web App do Google Sheets
+            const GOOGLE_SHEETS_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbyQm3-fEtMm1GPwPJYg56akZ2mSvQ9jIitohchCJUKbkfvYtVItXT011O2dhPp24iYz/exec";
 
             showToast("Registrando e redirecionando para o WhatsApp...");
 
             // Disparo automático em segundo plano para o Google Sheets
-            if (GOOGLE_SHEETS_WEBAPP_URL && GOOGLE_SHEETS_WEBAPP_URL !== "SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI") {
+            if (GOOGLE_SHEETS_WEBAPP_URL) {
                 fetch(GOOGLE_SHEETS_WEBAPP_URL, {
                     method: 'POST',
                     mode: 'no-cors',
