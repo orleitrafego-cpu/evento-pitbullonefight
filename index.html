@@ -733,8 +733,8 @@
                 for (let i = 1; i < qty; i++) {
                     const div = document.createElement('div');
                     div.innerHTML = `
-                        <label class="block text-[11px] font-bold uppercase text-gray-400 mb-1">Nome Completo do Acompanhante ${i}</label>
-                        <input type="text" required placeholder="Digite o nome completo do acompanhante ${i}" class="companion-input w-full bg-black border border-zinc-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-500">
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Nome do Acompanhante ${i}</label>
+                        <input type="text" required placeholder="Nome completo do acompanhante ${i}" class="companion-input w-full bg-black border border-zinc-800 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-500">
                     `;
                     inputsContainer.appendChild(div);
                 }
@@ -743,15 +743,7 @@
             }
         }
 
-        // Toggle FAQ Accordion
-        function toggleFaq(id) {
-            const content = document.getElementById(`faq-content-${id}`);
-            const icon = document.getElementById(`faq-icon-${id}`);
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        }
-
-        // Enviar pedido direto para o WhatsApp
+        // Enviar pedido direto para o WhatsApp e salvar na Planilha Google
         function sendOrderToWhatsApp(e) {
             e.preventDefault();
             const name = document.getElementById('buyer-name').value;
@@ -768,7 +760,37 @@
                 }
             });
 
-            showToast("Redirecionando para o seu WhatsApp com os dados do pedido...");
+            // Extrai acompanhantes individuais para as colunas H, I, J, K
+            const companion1 = companionInputs[0] ? companionInputs[0].value.trim() : '';
+            const companion2 = companionInputs[1] ? companionInputs[1].value.trim() : '';
+            const companion3 = companionInputs[2] ? companionInputs[2].value.trim() : '';
+            const companion4 = companionInputs[3] ? companionInputs[3].value.trim() : '';
+
+            // URL da sua Web App do Google Sheets (Substitua pela sua URL)
+            const GOOGLE_SHEETS_WEBAPP_URL = "SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI";
+
+            showToast("Registrando e redirecionando para o WhatsApp...");
+
+            // Disparo automático em segundo plano para o Google Sheets
+            if (GOOGLE_SHEETS_WEBAPP_URL && GOOGLE_SHEETS_WEBAPP_URL !== "SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI") {
+                fetch(GOOGLE_SHEETS_WEBAPP_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        ticket: selectedTicket.name,
+                        qty: qty,
+                        total: `R$ ${total}`,
+                        companion1: companion1,
+                        companion2: companion2,
+                        companion3: companion3,
+                        companion4: companion4
+                    })
+                }).catch(err => console.log("Erro ao salvar na planilha:", err));
+            }
 
             let msg = `Olá, vim pelo site e quero garantir a minha vaga para o Pitbull One Fight no dia 05/12, segue minhas informações:\n\n`;
             msg += `*Comprador:* ${name}\n`;
