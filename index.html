@@ -63,8 +63,8 @@
 
     <main class="pt-20">
         <!-- Hero Section com Blur/Fade suave no rodapé -->
-        <section class="relative min-h-[85vh] flex items-center justify-center py-20 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.85)), url('https://lh3.googleusercontent.com/d/1_yhnqoSWCfXFCUwSQjI8t9v0QeAJ1c_L=s1600');">
-            <div class="max-w-5xl mx-auto px-4 text-center space-y-6 relative z-10 flex flex-col items-center">
+        <section class="relative min-h-[75vh] sm:min-h-[85vh] flex items-center justify-center py-10 sm:py-20 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0.85)), url('https://lh3.googleusercontent.com/d/1_yhnqoSWCfXFCUwSQjI8t9v0QeAJ1c_L=s1600');">
+            <div class="max-w-5xl mx-auto px-4 text-center space-y-4 sm:space-y-6 relative z-10 flex flex-col items-center">
                 
                 <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/40 px-4 py-1.5 rounded-full text-yellow-500 font-bold text-xs uppercase tracking-widest animate-pulse">
                     ⚡ EDIÇÃO 10 • 05 DE DEZEMBRO DE 2026 ÀS 14:00
@@ -79,7 +79,7 @@
                 </p>
 
                 <!-- Contagem Regressiva -->
-                <div class="grid grid-cols-4 gap-3 max-w-md mx-auto py-4">
+                <div class="grid grid-cols-4 gap-3 max-w-md mx-auto py-2 sm:py-4">
                     <div class="bg-zinc-900/90 border border-yellow-500/30 p-3 rounded text-center">
                         <span id="days" class="font-display text-3xl sm:text-4xl font-bold text-yellow-500">00</span>
                         <span class="block text-[10px] text-gray-400 uppercase font-semibold">Dias</span>
@@ -98,355 +98,409 @@
                     </div>
                 </div>
 
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="#ingressos" class="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-400 text-black font-black text-xl uppercase px-10 py-4 rounded-none tracking-wider shadow-xl shadow-yellow-500/30 transition transform hover:scale-105">
                         Comprar Ingresso Agora
                     </a>
                 </div>
 
-                <p class="text-xs text-gray-400 uppercase tracking-widest pt-2">
+                <p class="text-xs text-gray-400 uppercase tracking-widest pt-1 sm:pt-2">
                     🔥 No último evento tivemos mais de <span class="text-white">1.000 pessoas reunidas na arena!</span>
                 </p>
             </div>
 
             <!-- Efeito Blur & Soft Fade de Transição para a próxima seção -->
-            <div class="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-b from-transparent via-zinc-950/70 to-zinc-950 backdrop-blur-[2px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 right-0 h-16 sm:h-28 bg-gradient-to-b from-transparent via-zinc-950/70 to-zinc-950 backdrop-blur-[2px] pointer-events-none"></div>
         </section>
 
         <!-- 4. 5 Pilares de Diferenciais -->
-        <section id="diferenciais" class="relative py-20 bg-zinc-950">
+        <section id="diferenciais" class="relative py-10 sm:py-20 bg-zinc-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-16">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Conforto & Estrutura</span>
-                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">POR QUE PARTICIPAR?</h2>
-                    <p class="text-gray-400 mt-2 text-base">Diferenciais estratégicos pensados para garantir uma experiência de alto nível.</p>
+                    <h2 class="font-display text-4xl sm:text-6xl uppercase tracking-wider text-white mt-1">POR QUE PARTICIPAR?</h2>
+                    <p class="text-gray-400 mt-1 sm:mt-2 text-sm sm:text-base">Diferenciais estratégicos pensados para garantir uma experiência de alto nível.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                     <!-- Pillar 1 -->
-                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
-                        <i data-lucide="zap" class="w-10 h-10 text-yellow-500 mb-4"></i>
-                        <h3 class="font-display text-3xl uppercase text-white">Lutas Eletrizantes</h3>
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-6 sm:p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
+                        <i data-lucide="zap" class="w-8 h-8 sm:w-10 sm:h-10 text-yellow-500 mb-3 sm:mb-4"></i>
+                        <h3 class="font-display text-2xl sm:text-3xl uppercase text-white">Lutas Eletrizantes</h3>
                         <p class="text-gray-400 text-sm mt-2 leading-relaxed">Combates que vão te tirar o fôlego, com atletas mais bem preparados do circuito, garantindo uma pura adrenaline, um espetáculo do início ao fim.</p>
                     </div>
 
                     <!-- Pillar 2 -->
-                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
-                        <i data-lucide="crown" class="w-10 h-10 text-yellow-500 mb-4"></i>
-                        <h3 class="font-display text-3xl uppercase text-white">Área VIP</h3>
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-6 sm:p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
+                        <i data-lucide="crown" class="w-8 h-8 sm:w-10 sm:h-10 text-yellow-500 mb-3 sm:mb-4"></i>
+                        <h3 class="font-display text-2xl sm:text-3xl uppercase text-white">Área VIP</h3>
                         <p class="text-gray-400 text-sm mt-2 leading-relaxed">Espaço reservado beira octógono com atendimento exclusivo, conforto máximo e proximidade dos lutadores.</p>
                     </div>
 
                     <!-- Pillar 3 -->
-                    <div class="bg-zinc-900/90 border border-zinc-800 p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
-                        <i data-lucide="car" class="w-10 h-10 text-yellow-500 mb-4"></i>
-                        <h3 class="font-display text-3xl uppercase text-white">Estacionamento nos Arredores</h3>
+                    <div class="bg-zinc-900/90 border border-zinc-800 p-6 sm:p-8 rounded-xl hover:border-yellow-500/50 transition duration-300">
+                        <i data-lucide="car" class="w-8 h-8 sm:w-10 sm:h-10 text-yellow-500 mb-3 sm:mb-4"></i>
+                        <h3 class="font-display text-2xl sm:text-3xl uppercase text-white">Estacionamento nos Arredores</h3>
                         <p class="text-gray-400 text-sm mt-2 leading-relaxed">Muitas vagas seguras e tranquilas nas ruas e bolsões aos arredores do local do evento, sem estresse ou dor de cabeça.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Efeito Blur/Glow de Transição -->
-            <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-zinc-950 backdrop-blur-[1px] pointer-events-none"></div>
         </section>
 
         <!-- 5. Checkout Interativo & Formulário de Lista Oficial com Acompanhantes Dinâmicos -->
-        <section id="ingressos" class="relative py-20 bg-zinc-950">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-14">
+        <section id="ingressos" class="relative py-10 sm:py-20 bg-zinc-950">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-14">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Vagas Limitadas</span>
-                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">GARANTA SEU LUGAR NA LISTA</h2>
-                    <p class="text-gray-400 mt-2 text-sm sm:text-base">Selecione seu ingresso para o Pitbull One Fight 10 (05/12/2026 às 14:00).</p>
+                    <h2 class="font-display text-4xl sm:text-6xl uppercase tracking-wider text-white mt-1">GARANTA SEU LUGAR NA LISTA</h2>
+                    <p class="text-gray-400 mt-1 sm:mt-2 text-xs sm:text-base">Selecione seu ingresso para o Pitbull One Fight 10 (05/12/2026 às 14:00).</p>
                 </div>
 
                 <!-- Seleção de Ingressos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-3xl mx-auto mb-8 sm:mb-12">
                     <!-- Option 1: Arquibancada -->
-                    <div onclick="selectTicket('Arquibancada', 59.90)" id="ticket-Arquibancada" class="ticket-card cursor-pointer bg-zinc-900 border-2 border-zinc-800 hover:border-yellow-500 p-6 rounded-2xl transition flex flex-col justify-between relative">
+                    <div onclick="selectTicket('Arquibancada', 59.90)" id="ticket-Arquibancada" class="ticket-card cursor-pointer bg-zinc-900 border-2 border-zinc-800 hover:border-yellow-500 p-5 sm:p-6 rounded-2xl transition flex flex-col justify-between relative">
                         <div>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-gray-400 bg-zinc-800 px-3 py-1 rounded">Setor Geral</span>
-                            <h3 class="font-display text-3xl uppercase text-white mt-3">Arquibancada</h3>
+                            <h3 class="font-display text-2xl sm:text-3xl uppercase text-white mt-2 sm:mt-3">Arquibancada</h3>
                             <p class="text-xs text-gray-400 mt-1">Visão geral elevada de toda a arena.</p>
                         </div>
-                        <div class="mt-8">
+                        <div class="mt-6 sm:mt-8">
                             <div class="flex items-baseline gap-1">
                                 <span class="text-sm font-bold text-yellow-500">R$</span>
-                                <span class="font-display text-5xl font-bold text-white">59</span>
+                                <span class="font-display text-4xl sm:text-5xl font-bold text-white">59</span>
                                 <span class="text-xs text-gray-400">,90</span>
                             </div>
-                            <button type="button" class="w-full mt-4 bg-zinc-800 text-gray-200 font-bold py-3 rounded-none uppercase text-xs tracking-wider pointer-events-none">Selecionar</button>
+                            <button type="button" class="w-full mt-3 sm:mt-4 bg-zinc-800 text-gray-200 font-bold py-3 rounded-none uppercase text-xs tracking-wider pointer-events-none">Selecionar</button>
                         </div>
                     </div>
 
                     <!-- Option 2: Cadeira VIP -->
-                    <div onclick="selectTicket('Cadeira VIP', 149.90)" id="ticket-Cadeira VIP" class="ticket-card cursor-pointer bg-zinc-900 border-2 border-yellow-500 p-6 rounded-2xl transition flex flex-col justify-between relative shadow-xl shadow-yellow-500/10">
+                    <div onclick="selectTicket('Cadeira VIP', 149.90)" id="ticket-Cadeira VIP" class="ticket-card cursor-pointer bg-zinc-900 border-2 border-yellow-500 p-5 sm:p-6 rounded-2xl transition flex flex-col justify-between relative shadow-xl shadow-yellow-500/10">
                         <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-yellow-500 text-black text-[10px] font-black uppercase px-4 py-1 rounded-full tracking-widest shadow">
                             Mais Popular
                         </div>
                         <div>
                             <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-500 bg-yellow-950/60 px-3 py-1 rounded border border-yellow-800/60">Beira Octógono</span>
-                            <h3 class="font-display text-3xl uppercase text-white mt-3">Cadeira VIP</h3>
+                            <h3 class="font-display text-2xl sm:text-3xl uppercase text-white mt-2 sm:mt-3">Cadeira VIP</h3>
                             <p class="text-xs text-gray-400 mt-1">Assentos bem próximos do cage de lutas.</p>
                         </div>
-                        <div class="mt-8">
+                        <div class="mt-6 sm:mt-8">
                             <div class="flex items-baseline gap-1">
                                 <span class="text-sm font-bold text-yellow-500">R$</span>
-                                <span class="font-display text-5xl font-bold text-yellow-500">149</span>
+                                <span class="font-display text-4xl sm:text-5xl font-bold text-yellow-500">149</span>
                                 <span class="text-xs text-gray-400">,90</span>
                             </div>
-                            <button type="button" class="w-full mt-4 bg-yellow-500 text-black font-bold py-3 rounded-none uppercase text-xs tracking-wider pointer-events-none">Selecionar VIP</button>
+                            <button type="button" class="w-full mt-3 sm:mt-4 bg-yellow-500 text-black font-bold py-3 rounded-none uppercase text-xs tracking-wider pointer-events-none">Selecionar VIP</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Formulário de Entrada na Lista Oficial -->
-        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 sm:p-10 shadow-2xl">
-            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-zinc-800 pb-6 mb-6 gap-4">
-                <div>
-                    <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest">Confirmação de Acesso</span>
-                    <h3 class="font-display text-3xl uppercase text-white mt-1">Inclusão na Lista Oficial de Entrada</h3>
-                </div>
-                <div class="bg-black px-4 py-2.5 rounded-xl border border-zinc-800">
-                    <span class="text-[10px] text-gray-400 block uppercase font-bold">Ingresso Selecionado</span>
-                    <span id="ticket-summary-name" class="font-bold text-yellow-500 text-sm">Cadeira VIP (R$ 149,90)</span>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 sm:p-10 shadow-2xl">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-zinc-800 pb-4 sm:pb-6 mb-4 sm:mb-6 gap-3 sm:gap-4">
+                        <div>
+                            <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest">Confirmação de Acesso</span>
+                            <h3 class="font-display text-2xl sm:text-3xl uppercase text-white mt-1">Inclusão na Lista Oficial de Entrada</h3>
+                        </div>
+                        <div class="bg-black px-4 py-2.5 rounded-xl border border-zinc-800 w-full sm:w-auto">
+                            <span class="text-[10px] text-gray-400 block uppercase font-bold">Ingresso Selecionado</span>
+                            <span id="ticket-summary-name" class="font-bold text-yellow-500 text-sm">Cadeira VIP (R$ 149,90)</span>
+                        </div>
+                    </div>
+
+                    <form onsubmit="sendOrderToWhatsApp(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Nome Completo do Comprador</label>
+                                <input type="text" id="buyer-name" required placeholder="Digite seu nome completo" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">E-mail para Confirmação</label>
+                                <input type="email" id="buyer-email" required placeholder="seu@email.com" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">WhatsApp / Telefone</label>
+                                <input type="tel" id="buyer-phone" required placeholder="(11) 99999-9999" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Quantidade de Ingressos</label>
+                                <select id="buyer-qty" onchange="onQuantityChange()" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
+                                    <option value="1">1 Ingresso</option>
+                                    <option value="2">2 Ingressos</option>
+                                    <option value="3">3 Ingressos</option>
+                                    <option value="4">4 Ingressos</option>
+                                    <option value="5">5 Ingressos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Container Dinâmico para Nomes dos Acompanhantes -->
+                        <div id="companions-container" class="space-y-3 pt-2 border-t border-zinc-800/60 hidden">
+                            <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest block">Nomes dos Acompanhantes para a Lista</span>
+                            <div id="companions-inputs" class="space-y-3">
+                                <!-- Gerado via JS -->
+                            </div>
+                        </div>
+
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block font-semibold uppercase">Total a Pagar:</span>
+                                <span id="final-total-display" class="font-display text-4xl font-bold text-yellow-500">R$ 149,90</span>
+                            </div>
+                            <button type="submit" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-extrabold uppercase text-base px-10 py-4 rounded-none tracking-wider shadow-xl shadow-green-600/20 transition flex items-center justify-center gap-2">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                <span>Enviar Pedido via WhatsApp</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </section>
 
-            <form onsubmit="sendOrderToWhatsApp(event)" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Nome Completo do Comprador</label>
-                        <input type="text" id="buyer-name" required placeholder="Digite seu nome completo" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">E-mail para Confirmação</label>
-                        <input type="email" id="buyer-email" required placeholder="seu@email.com" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">WhatsApp / Telefone</label>
-                        <input type="tel" id="buyer-phone" required placeholder="(11) 99999-9999" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-gray-300 mb-1">Quantidade de Ingressos</label>
-                        <select id="buyer-qty" onchange="onQuantityChange()" class="w-full bg-black border border-zinc-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-yellow-500">
-                            <option value="1">1 Ingresso</option>
-                            <option value="2">2 Ingressos</option>
-                            <option value="3">3 Ingressos</option>
-                            <option value="4">4 Ingressos</option>
-                            <option value="5">5 Ingressos</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Container Dinâmico para Nomes dos Acompanhantes -->
-                <div id="companions-container" class="space-y-3 pt-2 border-t border-zinc-800/60 hidden">
-                    <span class="text-xs font-bold text-yellow-500 uppercase tracking-widest block">Nomes dos Acompanhantes para a Lista</span>
-                    <div id="companions-inputs" class="space-y-3">
-                        <!-- Gerado via JS -->
-                    </div>
-                </div>
-
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-800">
-                    <div>
-                        <span class="text-xs text-gray-400 block font-semibold uppercase">Total a Pagar:</span>
-                        <span id="final-total-display" class="font-display text-4xl font-bold text-yellow-500">R$ 149,90</span>
-                    </div>
-                    <button type="submit" class="w-full sm:w-auto bg-green-600 hover:bg-green-500 text-white font-extrabold uppercase text-base px-10 py-4 rounded-none tracking-wider shadow-xl shadow-green-600/20 transition flex items-center justify-center gap-2">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
-                        <span>Enviar Pedido via WhatsApp</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-        <!-- Blur Section Divider -->
-        <div class="relative w-full h-16 bg-gradient-to-b from-zinc-950 via-zinc-900/40 to-zinc-950 backdrop-blur-md z-20 -mt-8 -mb-8 pointer-events-none"></div>
-
-        <!-- 6. Seção de Depoimentos (Posicionada após a escolha/sessão de ingressos) -->
-        <section id="depoimentos" class="relative py-20 bg-zinc-950">
+        <!-- 6. Seção de Depoimentos -->
+        <section id="depoimentos" class="relative py-10 sm:py-20 bg-zinc-950">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Experiência do Público</span>
-                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">QUEM FOI, APROVA</h2>
-                    <p class="text-gray-400 mt-2 text-base">Avaliações reais de espectadores das edições anteriores do Pitbull One Fight. Deslize para ver mais.</p>
+                    <h2 class="font-display text-4xl sm:text-6xl uppercase tracking-wider text-white mt-1">QUEM FOI, APROVA</h2>
+                    <p class="text-gray-400 mt-1 sm:mt-2 text-sm sm:text-base">Avaliações reais de espectadores das edições anteriores do Pitbull One Fight. Deslize para ver mais.</p>
                 </div>
 
                 <!-- Carousel Container -->
                 <div class="relative max-w-2xl mx-auto">
                     <!-- Cards Carousel -->
-                    <div id="testimonial-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 pt-2 px-1 no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+                    <div id="testimonial-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 pt-1 px-1 no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
                         
-                        <!-- Testimonial 1 -->
-                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-8 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
+                        <!-- Testimonial 1: Marcão -->
+                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-6 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
                             <div>
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="flex items-center gap-4">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Juliana Mendes" class="w-14 h-14 rounded-full object-cover border-2 border-yellow-500/80 shadow-md">
+                                <div class="flex items-center justify-between mb-4 sm:mb-6">
+                                    <div class="flex items-center gap-3 sm:gap-4">
+                                        <img src="https://lh3.googleusercontent.com/d/1henguVE7gPJjUEv14O1ghqbYkvOWlJmB=s300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80';" alt="Marcão" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover object-center border-2 border-yellow-500/80 shadow-md">
                                         <div>
-                                            <h4 class="text-white font-bold text-base">Juliana Mendes</h4>
-                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Osasco - SP</span>
+                                            <h4 class="text-white font-bold text-sm sm:text-base">Marcão</h4>
+                                            <span class="text-xs text-yellow-500 font-semibold uppercase">São Paulo - SP</span>
                                         </div>
                                     </div>
-                                    <div class="flex text-yellow-500 gap-1 bg-yellow-500/10 px-3 py-1.5 rounded-full border border-yellow-500/20">
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <div class="flex text-yellow-500 gap-0.5 sm:gap-1 bg-yellow-500/10 px-2.5 py-1 rounded-full border border-yellow-500/20">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
                                     </div>
                                 </div>
-                                <p class="text-gray-200 text-sm sm:text-base leading-relaxed italic">
-                                    "Organização impecável do início ao fim, entrada sem filas gigantes, cronograma das lutas seguido à risca e segurança nota 10. Você percebe o respeito que eles têm tanto com os atletas quanto com o público que compra o ingresso."
+                                <p class="text-gray-200 text-xs sm:text-base leading-relaxed italic">
+                                    "Melhor evento de São Paulo! Muito bem organizado, e com lutas de alto nível!"
                                 </p>
                             </div>
-                            <div class="mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
-                                <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
-                                <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso Confirmado</span>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-8 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
-                            <div>
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="flex items-center gap-4">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="Thiago Martins" class="w-14 h-14 rounded-full object-cover border-2 border-yellow-500/80 shadow-md">
-                                        <div>
-                                            <h4 class="text-white font-bold text-base">Thiago Martins</h4>
-                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Jundiaí - SP</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex text-yellow-500 gap-1 bg-yellow-500/10 px-3 py-1.5 rounded-full border border-yellow-500/20">
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    </div>
-                                </div>
-                                <p class="text-gray-200 text-sm sm:text-base leading-relaxed italic">
-                                    "Levei minha namorada e ela amou o show! Eu fiquei com receio de ela achar chato, mas a produção do evento parece show de TV internacional! Luzes, DJ, praça de alimentação com ótimos food trucks e estacionamento seguro no local. Virou nosso rolê oficial do fim de ano."
-                                </p>
-                            </div>
-                            <div class="mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
-                                <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
-                                <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso Confirmado</span>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-8 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
-                            <div>
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="flex items-center gap-4">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" alt="Marcelo Camargo" class="w-14 h-14 rounded-full object-cover border-2 border-yellow-500/80 shadow-md">
-                                        <div>
-                                            <h4 class="text-white font-bold text-base">Marcelo Camargo</h4>
-                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Alphaville - Barueri/SP</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex text-yellow-500 gap-1 bg-yellow-500/10 px-3 py-1.5 rounded-full border border-yellow-500/20">
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    </div>
-                                </div>
-                                <p class="text-gray-200 text-sm sm:text-base leading-relaxed italic">
-                                    "A experiência do Vip vale cada centavo! Vou de Vip nessa próxima edição com uns amigos da academia. No último evento o atendimento excelente, comida e bebida de qualidade e ficamos a poucos metros do cage trocando ideia com atletas conhecidos. Recomendo demais!"
-                                </p>
-                            </div>
-                            <div class="mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                            <div class="mt-6 sm:mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
                                 <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
                                 <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso VIP</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2: Bruno Lopes -->
+                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-6 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
+                            <div>
+                                <div class="flex items-center justify-between mb-4 sm:mb-6">
+                                    <div class="flex items-center gap-3 sm:gap-4">
+                                        <img src="https://lh3.googleusercontent.com/d/1Eq7j9DW2o2MvF7MfaD1pVjR-5MVSZXs9=s300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80';" alt="Bruno Lopes" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover object-center border-2 border-yellow-500/80 shadow-md">
+                                        <div>
+                                            <h4 class="text-white font-bold text-sm sm:text-base">Bruno Lopes</h4>
+                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Espectador Verificado</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500 gap-0.5 sm:gap-1 bg-yellow-500/10 px-2.5 py-1 rounded-full border border-yellow-500/20">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-base leading-relaxed italic">
+                                    "Evento top e muito bem organizado!! Estão de parabéns aguardando a próxima edição"
+                                </p>
+                            </div>
+                            <div class="mt-6 sm:mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                                <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
+                                <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso Confirmado</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3: Erica Almeida -->
+                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-6 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
+                            <div>
+                                <div class="flex items-center justify-between mb-4 sm:mb-6">
+                                    <div class="flex items-center gap-3 sm:gap-4">
+                                        <img src="https://lh3.googleusercontent.com/d/1ldvlPq8aniIK1V3U1ogVU62ViYMfx__1=s300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80';" alt="Erica Almeida" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover object-center border-2 border-yellow-500/80 shadow-md">
+                                        <div>
+                                            <h4 class="text-white font-bold text-sm sm:text-base">Erica Almeida</h4>
+                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Espectadora Verificada</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500 gap-0.5 sm:gap-1 bg-yellow-500/10 px-2.5 py-1 rounded-full border border-yellow-500/20">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-base leading-relaxed italic">
+                                    "Evento top de mais, tudo bem organizado e perfeito. Estão de parabéns 👏🏻👏🏻👏🏻 ansiosa para o próximo"
+                                </p>
+                            </div>
+                            <div class="mt-6 sm:mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                                <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
+                                <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso Confirmado</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4: Douglas Aníbal -->
+                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-6 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
+                            <div>
+                                <div class="flex items-center justify-between mb-4 sm:mb-6">
+                                    <div class="flex items-center gap-3 sm:gap-4">
+                                        <img src="https://lh3.googleusercontent.com/d/1iCtWGdo3tspDkRI6fJhYOrAUEwc1JpsN=s300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80';" alt="Douglas Aníbal" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover object-center border-2 border-yellow-500/80 shadow-md">
+                                        <div>
+                                            <h4 class="text-white font-bold text-sm sm:text-base">Douglas Aníbal</h4>
+                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Espectador Verificado</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500 gap-0.5 sm:gap-1 bg-yellow-500/10 px-2.5 py-1 rounded-full border border-yellow-500/20">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-base leading-relaxed italic">
+                                    "Evento top, as lutas eletrizantes e a organização do evento nível UFC. Parabéns a todos envolvidos"
+                                </p>
+                            </div>
+                            <div class="mt-6 sm:mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                                <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
+                                <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso VIP</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5: Mariuza Lina -->
+                        <div class="snap-center shrink-0 w-full bg-zinc-900/90 border border-zinc-800 p-6 sm:p-10 rounded-2xl flex flex-col justify-between shadow-2xl">
+                            <div>
+                                <div class="flex items-center justify-between mb-4 sm:mb-6">
+                                    <div class="flex items-center gap-3 sm:gap-4">
+                                        <img src="https://lh3.googleusercontent.com/d/1zAW9KpL_YEAyqYTDG-LjQZp3MxiZ64Qt=s300" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80';" alt="Mariuza Lina" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover object-center border-2 border-yellow-500/80 shadow-md">
+                                        <div>
+                                            <h4 class="text-white font-bold text-sm sm:text-base">Mariuza Lina</h4>
+                                            <span class="text-xs text-yellow-500 font-semibold uppercase">Espectadora Verificada</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex text-yellow-500 gap-0.5 sm:gap-1 bg-yellow-500/10 px-2.5 py-1 rounded-full border border-yellow-500/20">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-base leading-relaxed italic">
+                                    "Amei estar no evento, tudo muito bem organizado e varias lutas top de mais. Parabens"
+                                </p>
+                            </div>
+                            <div class="mt-6 sm:mt-8 pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                                <span class="text-xs text-gray-400 font-medium">Depoimento Verificado</span>
+                                <span class="text-[10px] bg-zinc-800/90 text-yellow-500 px-3 py-1 rounded-full uppercase font-bold border border-yellow-500/20">Ingresso Confirmado</span>
                             </div>
                         </div>
 
                     </div>
 
                     <!-- Left / Right Navigation Buttons -->
-                    <button onclick="scrollTestimonials(-1)" aria-label="Anterior" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 sm:-translate-x-6 bg-zinc-900/90 border border-yellow-500/40 text-yellow-500 hover:bg-yellow-500 hover:text-black w-10 h-10 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 z-10">
-                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    <button onclick="scrollTestimonials(-1)" aria-label="Anterior" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-6 bg-zinc-900/90 border border-yellow-500/40 text-yellow-500 hover:bg-yellow-500 hover:text-black w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 z-10">
+                        <i data-lucide="chevron-left" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                     </button>
-                    <button onclick="scrollTestimonials(1)" aria-label="Próximo" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 sm:translate-x-6 bg-zinc-900/90 border border-yellow-500/40 text-yellow-500 hover:bg-yellow-500 hover:text-black w-10 h-10 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 z-10">
-                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    <button onclick="scrollTestimonials(1)" aria-label="Próximo" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-6 bg-zinc-900/90 border border-yellow-500/40 text-yellow-500 hover:bg-yellow-500 hover:text-black w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110 z-10">
+                        <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                     </button>
 
-                    <!-- Indicators Dots -->
-                    <div class="flex items-center justify-center gap-2 mt-6">
-                        <button onclick="goToTestimonial(0)" id="dot-0" aria-label="Depoimento 1" class="w-3 h-3 rounded-full bg-yellow-500 transition-all duration-300"></button>
+                    <!-- Indicators Dots (5 Slides) -->
+                    <div class="flex items-center justify-center gap-2 mt-4 sm:mt-6">
+                        <button onclick="goToTestimonial(0)" id="dot-0" aria-label="Depoimento 1" class="w-8 h-3 rounded-full bg-yellow-500 transition-all duration-300"></button>
                         <button onclick="goToTestimonial(1)" id="dot-1" aria-label="Depoimento 2" class="w-3 h-3 rounded-full bg-zinc-700 hover:bg-yellow-500/60 transition-all duration-300"></button>
                         <button onclick="goToTestimonial(2)" id="dot-2" aria-label="Depoimento 3" class="w-3 h-3 rounded-full bg-zinc-700 hover:bg-yellow-500/60 transition-all duration-300"></button>
+                        <button onclick="goToTestimonial(3)" id="dot-3" aria-label="Depoimento 4" class="w-3 h-3 rounded-full bg-zinc-700 hover:bg-yellow-500/60 transition-all duration-300"></button>
+                        <button onclick="goToTestimonial(4)" id="dot-4" aria-label="Depoimento 5" class="w-3 h-3 rounded-full bg-zinc-700 hover:bg-yellow-500/60 transition-all duration-300"></button>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 7. FAQ Sanfonado -->
-        <section id="faq" class="py-20 bg-zinc-950 relative z-10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
+        <section id="faq" class="py-10 sm:py-20 bg-zinc-950 relative z-10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-16">
                     <span class="text-yellow-500 font-bold uppercase tracking-widest text-xs">Perguntas Frequentes</span>
-                    <h2 class="font-display text-5xl sm:text-6xl uppercase tracking-wider text-white mt-1">DÚVIDAS FREQUENTES</h2>
+                    <h2 class="font-display text-4xl sm:text-6xl uppercase tracking-wider text-white mt-1">DÚVIDAS FREQUENTES</h2>
                     <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
                 </div>
 
-                <div class="space-y-4">
+                <div class="space-y-3 sm:space-y-4">
                     <!-- Q1 -->
                     <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-base sm:text-lg">Crianças ou menores de idade podem participar do evento?</span>
+                        <button onclick="toggleFaq(1)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-sm sm:text-lg">Crianças ou menores de idade podem participar do evento?</span>
                             <i id="faq-icon-1" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
                         </button>
-                        <div id="faq-content-1" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        <div id="faq-content-1" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4">
                             A classificação indicativa do evento é de 16 anos. Menores de 16 anos só poderão entrar acompanhados pelos pais ou responsável legal portando a devida documentação na entrada.
                         </div>
                     </div>
 
                     <!-- Q2 -->
                     <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-base sm:text-lg">O evento possui estacionamento e estrutura de alimentação no local?</span>
+                        <button onclick="toggleFaq(2)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-sm sm:text-lg">O evento possui estacionamento e estrutura de alimentação no local?</span>
                             <i id="faq-icon-2" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
                         </button>
-                        <div id="faq-content-2" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        <div id="faq-content-2" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4">
                             O local conta com uma excelente praça de alimentação e bar completo para você comer e beber com total conforto durante o evento. Quanto ao estacionamento, não dispomos de estacionamento próprio, mas a região conta com muitas vagas seguras aos arredores, sendo super fácil e tranquilo estacionar.
                         </div>
                     </div>
 
                     <!-- Q3 -->
                     <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-base sm:text-lg">Como funciona o acesso ao evento e o que preciso levar na entrada?</span>
+                        <button onclick="toggleFaq(3)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-sm sm:text-lg">Como funciona o acesso ao evento e o que preciso levar na entrada?</span>
                             <i id="faq-icon-3" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
                         </button>
-                        <div id="faq-content-3" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4">
+                        <div id="faq-content-3" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4">
                             O acesso é simples e direto: o seu nome e o de seus acompanhantes entram automaticamente para a Lista Oficial de Entrada assim que o pagamento é confirmado. No dia do evento, basta dirigir-se à portaria e apresentar um documento oficial com foto (RG ou CNH) para validação do nome na lista e liberação do acesso.
                         </div>
                     </div>
 
                     <!-- Q4 (Como Chegar / Localização) -->
                     <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-                        <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
-                            <span class="text-base sm:text-lg">Como chegar no local do evento? Qual é o endereço e mapa?</span>
+                        <button onclick="toggleFaq(4)" class="w-full px-5 py-4 sm:px-6 sm:py-5 text-left font-bold text-white flex items-center justify-between gap-4 hover:text-yellow-500 transition">
+                            <span class="text-sm sm:text-lg">Como chegar no local do evento? Qual é o endereço e mapa?</span>
                             <i id="faq-icon-4" data-lucide="chevron-down" class="w-5 h-5 text-yellow-500 transition-transform"></i>
                         </button>
-                        <div id="faq-content-4" class="hidden px-6 pb-6 text-gray-400 text-sm sm:text-base leading-relaxed border-t border-zinc-800 pt-4 space-y-4">
+                        <div id="faq-content-4" class="hidden px-5 pb-5 sm:px-6 sm:pb-6 text-gray-400 text-xs sm:text-base leading-relaxed border-t border-zinc-800 pt-3 sm:pt-4 space-y-3 sm:space-y-4">
                             <div>
-                                <strong class="text-white block text-sm sm:text-base">Endereço Oficial:</strong>
+                                <strong class="text-white block text-xs sm:text-base">Endereço Oficial:</strong>
                                 <p class="text-gray-300 mt-0.5">Rua Suzana Dias, 260 — Centro<br>Santana de Parnaíba · SP</p>
                             </div>
                             <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
                                 Localizado no coração histórico de Santana de Parnaíba, com fácil acesso pelas principais vias da região metropolitana de São Paulo.
                             </p>
                             <div>
-                                <a href="https://share.google/lUrLGdbAxi6Tm5AEW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase text-xs px-6 py-3 rounded-none tracking-wider transition shadow">
+                                <a href="https://share.google/lUrLGdbAxi6Tm5AEW" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase text-xs px-5 py-2.5 sm:px-6 sm:py-3 rounded-none tracking-wider transition shadow">
                                     <i data-lucide="navigation" class="w-4 h-4"></i>
                                     <span>Abrir Rota no Google Maps</span>
                                 </a>
@@ -458,23 +512,23 @@
         </section>
 
         <!-- 8. CTA Final -->
-        <section class="py-20 bg-gradient-to-t from-black via-zinc-950 to-black border-t border-zinc-900 text-center relative overflow-hidden">
-            <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
-                <span class="text-yellow-500 font-extrabold text-xs uppercase tracking-widest bg-yellow-950/60 px-4 py-1.5 rounded-full border border-yellow-800/60">
+        <section class="py-12 sm:py-20 bg-gradient-to-t from-black via-zinc-950 to-black border-t border-zinc-900 text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-4 sm:space-y-6">
+                <span class="text-yellow-500 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest bg-yellow-950/60 px-4 py-1.5 rounded-full border border-yellow-800/60">
                     Vagas Limitadas • 05/12/2026 às 14:00
                 </span>
                 
-                <h2 class="font-display text-5xl sm:text-7xl uppercase tracking-wider text-white leading-tight">
+                <h2 class="font-display text-4xl sm:text-7xl uppercase tracking-wider text-white leading-tight">
                     NÃO FIQUE DE FORA DO<br>
                     <span class="text-yellow-500 drop-shadow-[0_0_25px_rgba(234,179,8,0.85)] animate-pulse inline-block">10° PITBULL ONE FIGHT</span>
                 </h2>
                 
-                <p class="text-gray-300 text-lg sm:text-xl font-light">
+                <p class="text-gray-300 text-sm sm:text-xl font-light">
                     Garanta seu nome na lista e viva a experiência máxima das lutas em Santana de Parnaíba.
                 </p>
 
-                <div class="pt-4">
-                    <a href="#ingressos" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase text-xl px-12 py-5 rounded-none tracking-wider shadow-2xl shadow-yellow-500/30 transition transform hover:scale-105">
+                <div class="pt-2 sm:pt-4">
+                    <a href="#ingressos" class="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-extrabold uppercase text-lg sm:text-xl px-8 py-4 sm:px-12 sm:py-5 rounded-none tracking-wider shadow-2xl shadow-yellow-500/30 transition transform hover:scale-105">
                         Garantir Meu Ingresso Agora
                     </a>
                 </div>
@@ -482,22 +536,22 @@
         </section>
 
         <!-- 9. Produção Oficial -->
-        <section class="py-10 bg-zinc-950 border-t border-zinc-900 relative">
+        <section class="py-8 sm:py-10 bg-zinc-950 border-t border-zinc-900 relative">
             <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-6">Produção Oficial e Cobertura</p>
-                <div class="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
+                <p class="text-[10px] sm:text-xs uppercase tracking-widest text-gray-500 font-bold mb-4 sm:mb-6">Produção Oficial e Cobertura</p>
+                <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
                     <!-- Bloco TV -->
-                    <div class="flex items-center gap-3">
-                        <img src="https://lh3.googleusercontent.com/d/1Gwxh-1uFsf5sIag4zCPzRuKyOR7T7n0V=s1600" alt="Bloco TV" class="h-10 sm:h-12 w-auto object-contain hover:scale-105 transition duration-300">
-                        <span class="font-display text-2xl sm:text-3xl tracking-widest text-gray-300 uppercase">BLOCO TV</span>
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <img src="https://lh3.googleusercontent.com/d/1Gwxh-1uFsf5sIag4zCPzRuKyOR7T7n0V=s1600" alt="Bloco TV" class="h-8 sm:h-12 w-auto object-contain hover:scale-105 transition duration-300">
+                        <span class="font-display text-xl sm:text-3xl tracking-widest text-gray-300 uppercase">BLOCO TV</span>
                     </div>
 
                     <span class="hidden sm:inline text-gray-700 text-2xl">•</span>
 
                     <!-- Criaide -->
-                    <div class="flex items-center gap-3">
-                        <img src="https://lh3.googleusercontent.com/d/1866QP8UyYbh-WMXyoJ-lHhL-_MAyXVoo=s1600" alt="Criaide" class="h-10 sm:h-12 w-auto object-contain hover:scale-105 transition duration-300">
-                        <span class="font-display text-2xl sm:text-3xl tracking-widest text-gray-300 uppercase">CRIAIDE</span>
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <img src="https://lh3.googleusercontent.com/d/1866QP8UyYbh-WMXyoJ-lHhL-_MAyXVoo=s1600" alt="Criaide" class="h-8 sm:h-12 w-auto object-contain hover:scale-105 transition duration-300">
+                        <span class="font-display text-xl sm:text-3xl tracking-widest text-gray-300 uppercase">CRIAIDE</span>
                     </div>
                 </div>
             </div>
@@ -505,7 +559,7 @@
     </main>
 
     <!-- 10. Rodapé Oficial -->
-    <footer class="bg-zinc-950 border-t border-zinc-900 py-12 text-center sm:text-left">
+    <footer class="bg-zinc-950 border-t border-zinc-900 py-8 sm:py-12 text-center sm:text-left">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-4">
                 <img src="https://lh3.googleusercontent.com/d/1lioUFEP0vnpxtPLXjCXWxtCXkEHPbS5T=s1600" alt="Pitbull One Fight Logo" class="h-10 w-auto object-contain">
@@ -570,7 +624,7 @@
 
         // Testimonial Carousel Controls - Loop Infinito
         const slider = document.getElementById('testimonial-slider');
-        const totalSlides = 3;
+        const totalSlides = 5;
         let currentSlideIndex = 0;
 
         function updateDots() {
@@ -600,19 +654,14 @@
             const slideWidth = slider.clientWidth;
             const maxScrollLeft = slider.scrollWidth - slideWidth;
             
-            // Avançar para a direita
             if (direction === 1) {
                 if (slider.scrollLeft >= maxScrollLeft - 10) {
-                    // Chegou no último, volta infinitamente para o primeiro
                     slider.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
                     slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
                 }
-            } 
-            // Voltar para a esquerda
-            else if (direction === -1) {
+            } else if (direction === -1) {
                 if (slider.scrollLeft <= 10) {
-                    // Está no primeiro, vai infinitamente para o último
                     slider.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
                 } else {
                     slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
@@ -738,8 +787,8 @@
             const encodedMsg = encodeURIComponent(msg);
 
             setTimeout(() => {
-                window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
-            }, 1000);
+                window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMsg}`, '_blank');
+            }, 800);
         }
 
         function showToast(msg) {
